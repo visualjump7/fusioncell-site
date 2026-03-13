@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The App — Fusion Cell</title>
+  <meta name="description" content="The Fusion Cell app is your private window into your team's work. Holdings, budgets, cash flow, decisions, and an AI assistant — all in one secure place.">
+  <meta property="og:title" content="The App — Fusion Cell">
+  <meta property="og:description" content="Your private window into your team's work. Holdings, budgets, cash flow, and decisions in one place.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The App — Fusion Cell">
+  <meta name="twitter:description" content="Your private window into your team's work. Holdings, budgets, cash flow, and decisions in one place.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/app-page.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__wordmark">Fusion Cell</a>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="app.html" class="nav__link nav__link--active">The App</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="contact.html" class="btn btn--outline btn--nav">Start a Conversation</a>
+      </div>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" aria-hidden="true">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="services.html" class="nav__mobile-link">Services</a>
+    <a href="app.html" class="nav__mobile-link nav__mobile-link--active">The App</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="app-hero" aria-label="App introduction">
+    <div class="container">
+      <div class="reveal">
+        <h1 class="hero-headline">Your Window Into Your Team's Work</h1>
+        <p class="app-hero__sub">The Fusion Cell app puts everything your team is managing in one secure, private place.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Sections -->
+  <section class="section" aria-label="App features">
+    <div class="container">
+
+      <!-- Dashboard -->
+      <div class="app-feature reveal">
+        <div>
+          <div class="app-feature__label">Dashboard</div>
+          <h2 class="app-feature__title">Your Team's Latest Work, Front and Center</h2>
+          <p class="app-feature__desc">The dashboard surfaces what matters most. Total holdings value, upcoming obligations, pending decisions, and cash flow summaries — all maintained and updated by your Fusion Cell team.</p>
+        </div>
+        <div class="mockup" aria-hidden="true">
+          <div class="mockup-inner"></div>
+        </div>
+      </div>
+
+      <!-- Holdings -->
+      <div class="app-feature app-feature--reverse reveal">
+        <div>
+          <div class="app-feature__label">Holdings</div>
+          <h2 class="app-feature__title">Every Property, Aircraft, Vessel, Vehicle, and Collection</h2>
+          <p class="app-feature__desc">Browse every holding your team manages. Current values, detailed records, budget access, and filters by category or location. Your team keeps everything current so you always see the latest picture.</p>
+        </div>
+        <div class="mockup" aria-hidden="true">
+          <div class="mockup-inner"></div>
+        </div>
+      </div>
+
+      <!-- Budgets -->
+      <div class="app-feature reveal">
+        <div>
+          <div class="app-feature__label">Budgets</div>
+          <h2 class="app-feature__title">Detailed Operating Costs for Every Holding</h2>
+          <p class="app-feature__desc">Your team uploads detailed operating budgets for every holding. See annual costs, fixed and variable breakdowns, category-level detail, and monthly tracking. Know exactly what everything costs to own and operate.</p>
+        </div>
+        <div class="mockup" aria-hidden="true">
+          <div class="mockup-inner"></div>
+        </div>
+      </div>
+
+      <!-- Cash Flow -->
+      <div class="app-feature app-feature--reverse reveal">
+        <div>
+          <div class="app-feature__label">Cash Flow</div>
+          <h2 class="app-feature__title">Every Invoice and Obligation, Tracked</h2>
+          <p class="app-feature__desc">Your team tracks every invoice, payment, and financial obligation across your holdings. Calendar views, status tracking, and payment history give you full visibility. Nothing comes as a surprise.</p>
+        </div>
+        <div class="mockup" aria-hidden="true">
+          <div class="mockup-inner"></div>
+        </div>
+      </div>
+
+      <!-- Decisions -->
+      <div class="app-feature reveal">
+        <div>
+          <div class="app-feature__label">Decisions</div>
+          <h2 class="app-feature__title">Context, Recommendation, One Tap</h2>
+          <p class="app-feature__desc">When something needs your attention, your team puts it in front of you with full context and a recommendation. Approve or reject with one tap. Every decision is recorded with a complete audit trail.</p>
+        </div>
+        <div class="mockup" aria-hidden="true">
+          <div class="mockup-inner"></div>
+        </div>
+      </div>
+
+      <!-- AI Assistant -->
+      <div class="app-feature app-feature--reverse reveal">
+        <div>
+          <div class="app-feature__label">AI Assistant</div>
+          <h2 class="app-feature__title">Ask Anything About Your Holdings</h2>
+          <p class="app-feature__desc">A built-in assistant with full awareness of everything your team has loaded into the app. Query your holdings, budgets, cash flow, and decisions using natural language. Get answers grounded in your actual data.</p>
+        </div>
+        <div class="mockup" aria-hidden="true">
+          <div class="mockup-inner"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Security Note -->
+  <section class="section section--alt" aria-label="Security">
+    <div class="container">
+      <div class="security-note reveal">
+        <svg class="security-note__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M24 4l16 6v12c0 10-6 18-16 22C14 40 8 32 8 22V10l16-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M18 24l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h2 class="section-heading" style="margin-bottom: 16px;">Your Data Is Private</h2>
+        <p>Your Fusion Cell app is configured exclusively for you. No shared infrastructure, no cross-principal data, no compromises on security. Your information stays yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" aria-label="Request walkthrough">
+    <div class="container">
+      <div class="app-cta reveal">
+        <h2 class="section-heading">See It In Action</h2>
+        <p>Request a private walkthrough with our team.</p>
+        <a href="contact.html" class="btn btn--filled">Request a Walkthrough</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__wordmark">Fusion Cell</div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="about.html" class="footer__link">About</a>
+          <a href="services.html" class="footer__link">Services</a>
+          <a href="app.html" class="footer__link">The App</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </nav>
+        <div class="footer__copy">&copy; 2026 Fusion Cell. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

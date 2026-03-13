@@ -1,0 +1,114 @@
+/* About Page */
+
+/* Hero */
+.about-hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--nav-height) + 80px) var(--container-padding) 80px;
+}
+
+.about-hero__sub {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 24px auto 0;
+  line-height: 1.7;
+}
+
+/* Philosophy */
+.philosophy__content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.philosophy__content p {
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.philosophy__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Assembly Timeline */
+.timeline {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.timeline__step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.timeline__number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.timeline__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.timeline__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Team Structure */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.team-card__role {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.team-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.team-card__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline__step {
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+  }
+}

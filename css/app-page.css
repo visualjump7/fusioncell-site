@@ -1,0 +1,115 @@
+/* App Page */
+
+/* Hero */
+.app-hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--nav-height) + 80px) var(--container-padding) 80px;
+}
+
+.app-hero__sub {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: var(--color-text-secondary);
+  max-width: 620px;
+  margin: 24px auto 0;
+  line-height: 1.7;
+}
+
+/* Feature Sections */
+.app-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.app-feature:last-of-type {
+  border-bottom: none;
+}
+
+.app-feature--reverse {
+  direction: rtl;
+}
+
+.app-feature--reverse > * {
+  direction: ltr;
+}
+
+.app-feature__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.app-feature__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.app-feature__desc {
+  font-size: clamp(0.9375rem, 1.1vw, 1rem);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Security */
+.security-note {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.security-note__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 24px;
+  color: var(--color-accent);
+}
+
+.security-note p {
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+/* App CTA */
+.app-cta {
+  text-align: center;
+}
+
+.app-cta .section-heading {
+  margin-bottom: 16px;
+}
+
+.app-cta p {
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .app-feature {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .app-feature--reverse {
+    direction: ltr;
+  }
+
+  .app-feature .mockup {
+    order: -1;
+  }
+}

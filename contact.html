@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Fusion Cell</title>
+  <meta name="description" content="Start a conversation about how a Fusion Cell can work for you. Tell us about your holdings and we'll explore whether a dedicated team is the right fit.">
+  <meta property="og:title" content="Contact — Fusion Cell">
+  <meta property="og:description" content="Start a conversation about how a Fusion Cell can work for you.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Fusion Cell">
+  <meta name="twitter:description" content="Start a conversation about how a Fusion Cell can work for you.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__wordmark">Fusion Cell</a>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="app.html" class="nav__link">The App</a>
+        <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+        <a href="contact.html" class="btn btn--outline btn--nav">Start a Conversation</a>
+      </div>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" aria-hidden="true">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="services.html" class="nav__mobile-link">Services</a>
+    <a href="app.html" class="nav__mobile-link">The App</a>
+    <a href="contact.html" class="nav__mobile-link nav__mobile-link--active">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="contact-hero" aria-label="Contact introduction">
+    <div class="container">
+      <div class="reveal">
+        <h1 class="hero-headline">Start a Conversation</h1>
+        <p class="contact-hero__sub">Tell us a little about your situation and we'll explore whether a Fusion Cell is the right fit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="section" style="padding-top: 0;" aria-label="Inquiry form">
+    <div class="container">
+      <div class="contact-form-wrapper reveal">
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-input" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone <span style="color: var(--color-text-muted); font-weight: 400;">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Brief Description</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your holdings and what you're looking for." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--filled">Send Inquiry</button>
+        </form>
+
+        <div class="contact-alt">
+          <p>Prefer to reach out directly? Email us at <a href="mailto:inquiries@fusioncell.com">inquiries@fusioncell.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__wordmark">Fusion Cell</div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="about.html" class="footer__link">About</a>
+          <a href="services.html" class="footer__link">Services</a>
+          <a href="app.html" class="footer__link">The App</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </nav>
+        <div class="footer__copy">&copy; 2026 Fusion Cell. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

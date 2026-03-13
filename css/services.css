@@ -1,0 +1,140 @@
+/* Services Page */
+
+/* Hero */
+.services-hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--nav-height) + 80px) var(--container-padding) 80px;
+}
+
+.services-hero__sub {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: var(--color-text-secondary);
+  max-width: 640px;
+  margin: 24px auto 0;
+  line-height: 1.7;
+}
+
+/* Domain Section */
+.domain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.domain:last-of-type {
+  border-bottom: none;
+}
+
+.domain--reverse {
+  direction: rtl;
+}
+
+.domain--reverse > * {
+  direction: ltr;
+}
+
+.domain__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.domain__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.domain__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.domain__desc {
+  font-size: clamp(0.9375rem, 1.1vw, 1rem);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.domain__capabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.domain__capability {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.domain__capability::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Domain Visual Placeholder */
+.domain__visual {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.domain__visual-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--color-text-muted);
+  opacity: 0.4;
+}
+
+/* Custom Domains */
+.custom-domains {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.custom-domains p {
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .domain {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .domain--reverse {
+    direction: ltr;
+  }
+
+  .domain__visual {
+    order: -1;
+  }
+}
