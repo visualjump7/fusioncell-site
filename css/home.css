@@ -199,6 +199,187 @@
   margin-bottom: 40px;
 }
 
+/* Hero credibility line */
+.hero__credibility {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 20px;
+  letter-spacing: 0.01em;
+}
+
+/* Stat Cards */
+.stat-card__label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.stat-card__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Source Attribution */
+.source-attr {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 32px;
+  font-style: italic;
+}
+
+.fragmentation-close {
+  text-align: center;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  color: var(--color-text-secondary);
+  margin-top: 12px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Comparison Table */
+.comparison-table {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.comparison-table__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-surface-elevated);
+}
+
+.comparison-table__col-label {
+  padding: 16px 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.comparison-table__col-label--negative {
+  color: var(--color-text-muted);
+  border-right: 1px solid var(--color-border);
+}
+
+.comparison-table__col-label--positive {
+  color: var(--color-accent);
+}
+
+.comparison-table__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--color-border);
+}
+
+.comparison-table__cell {
+  padding: 16px 24px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.comparison-table__cell--negative {
+  color: var(--color-text-muted);
+  border-right: 1px solid var(--color-border);
+}
+
+.comparison-table__cell--positive {
+  color: var(--color-text-secondary);
+}
+
+/* Comparison Quote */
+.comparison-quote {
+  display: block;
+  text-align: center;
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mode Cards */
+.mode-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mode-card__badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  background: var(--color-accent-glow);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 100px;
+  padding: 4px 12px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.mode-card__badge--secondary {
+  color: var(--color-text-secondary);
+  background: rgba(161, 161, 170, 0.08);
+  border-color: rgba(161, 161, 170, 0.2);
+}
+
+.mode-card__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.mode-card__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.mode-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.mode-card__list li {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  padding-left: 16px;
+  position: relative;
+}
+
+.mode-card__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
 @media (max-width: 768px) {
   .app-preview {
     grid-template-columns: 1fr;
@@ -207,5 +388,16 @@
 
   .app-preview__visual {
     order: -1;
+  }
+
+  .comparison-table__header,
+  .comparison-table__row {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table__col-label--negative,
+  .comparison-table__cell--negative {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
   }
 }

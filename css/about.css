@@ -102,6 +102,89 @@
   line-height: 1.7;
 }
 
+/* Philosophy credibility line */
+.philosophy__credibility {
+  margin-top: 32px;
+  font-size: clamp(1rem, 1.2vw, 1.0625rem);
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Data Flow Diagram */
+.data-flow {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data-flow__tier {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  text-align: center;
+}
+
+.data-flow__tier--principal {
+  border-color: rgba(74, 222, 128, 0.3);
+  background: var(--color-accent-glow);
+}
+
+.data-flow__tier-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+}
+
+.data-flow__tier-title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-text);
+}
+
+.data-flow__tier-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.data-flow__connector {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, var(--color-border), rgba(74, 222, 128, 0.4));
+  position: relative;
+}
+
+.data-flow__connector::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid rgba(74, 222, 128, 0.4);
+}
+
+.data-flow__note {
+  text-align: center;
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 48px auto 0;
+}
+
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr;

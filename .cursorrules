@@ -1,0 +1,80 @@
+# Fusion Cell Marketing Website — Cursor Rules
+
+## Project Context
+This is the forward-facing marketing website for Fusion Cell, a dedicated team-based management service for high-net-worth principals with complex lifestyle holdings. Pure HTML/CSS/JS static site — no frameworks, no build tools, no Tailwind.
+
+## Core Philosophy
+The product is the Fusion Cell team — directors, managers, and specialists. The app is the communication gateway between the principal and their team. The team is the engine; the app is the window. Never position the app as the primary product.
+
+## Tech Stack
+- HTML5 semantic markup
+- CSS3 with custom properties (defined in css/variables.css)
+- Vanilla JavaScript only
+- Google Fonts (Inter) via CDN
+- No React, Next.js, Tailwind, or build tools
+
+## Brand System
+
+### Colors (all defined in css/variables.css)
+- Backgrounds: #000000, #0a0a0a, #111111
+- Surfaces: #161616 to #1a1a1a
+- Borders: #222222 to #2a2a2a
+- Accent: #4ade80 (mint green), hover #22c55e
+- Text: #ffffff (primary), #a1a1aa (secondary), #71717a (muted)
+
+### Typography
+- Inter only, weights 400/500/600/700
+- Tight letter-spacing on headlines (-0.02em to -0.03em)
+- Line height 1.6-1.7 on body text for dark background readability
+
+### Design Principles
+- Private banking aesthetic, NOT SaaS product page
+- Generous whitespace (120-160px section padding desktop)
+- Restrained mint green usage — CTAs, subtle highlights, hover states only
+- Glass morphism on nav (subtle backdrop-blur)
+- Scroll reveals: 20-30px translate up, opacity fade, 0.6s ease-out
+- Always respect prefers-reduced-motion
+
+## Terminology Rules — NON-NEGOTIABLE
+
+### Always say:
+- "your Fusion Cell team" (not admins, staff, operators, the system)
+- "directors and managers" (not users, employees)
+- "the app" or "the Fusion Cell app" (not platform, tool, software, portal)
+- "holdings" (not assets — on the marketing site)
+- "your team uploads / manages / maintains" (not the system generates)
+- "customizable" or "tailored to you" (not one-size-fits-all)
+- "window into your team's work" (not automated solution)
+- "cash flow" (not bills)
+- "principal" or "you" (not client, user, customer)
+
+### Never say:
+- "portfolio" (implies securities/investment)
+- "automated", "AI-driven", "AI-powered" (AI assistant is a feature, not the identity)
+- "smart" or "intelligent" to describe the core service
+
+## What NOT to Do
+- No JavaScript frameworks or build tools
+- No Tailwind CSS
+- No stock photography
+- No backend functionality (contact form is front-end only)
+- No SaaS patterns (pricing tables, feature grids, "Start Free Trial")
+- No bright colors except mint green accent, used sparingly
+- No Phantom Services branding — Fusion Cell is its own entity
+
+## Code Style
+- Use CSS custom properties from variables.css for all colors, radii, transitions
+- Semantic HTML with proper heading hierarchy
+- ARIA labels where needed
+- All hover states use var(--transition-base) for smooth transitions
+- Mobile breakpoint: 768px, tablet: 768-1199px, desktop: 1200px+
+
+## Messaging (March 2026 revision)
+- Lead with the PROBLEM (fragmentation, time tax, complexity) not the solution
+- Fusion Cell REPLACES chaos — it doesn't ADD a layer
+- "One relationship" is the core message
+- Two modes: Family (managed services) and Business (executive visibility)
+- The principal stops being the integration layer
+- Daily Executive Brief + 24/7 portal = decisions, not audits
+- $14.4B managed to date — use for credibility
+- AES-256 encryption — use in security sections
