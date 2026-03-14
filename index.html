@@ -32,7 +32,7 @@
       <a href="index.html" class="nav__wordmark">Fusion Cell</a>
       <div class="nav__links">
         <a href="about.html" class="nav__link">About</a>
-        <a href="services.html" class="nav__link">Services</a>
+        <a href="services.html" class="nav__link">Solutions</a>
         <a href="app.html" class="nav__link">The App</a>
         <a href="contact.html" class="nav__link">Contact</a>
         <a href="contact.html" class="btn btn--outline btn--nav">Start a Conversation</a>
@@ -49,52 +49,54 @@
   <div class="nav__mobile" aria-hidden="true">
     <a href="index.html" class="nav__mobile-link nav__mobile-link--active">Home</a>
     <a href="about.html" class="nav__mobile-link">About</a>
-    <a href="services.html" class="nav__mobile-link">Services</a>
+    <a href="services.html" class="nav__mobile-link">Solutions</a>
     <a href="app.html" class="nav__mobile-link">The App</a>
     <a href="contact.html" class="nav__mobile-link">Contact</a>
   </div>
 
   <!-- Hero -->
   <section class="hero" aria-label="Introduction">
-    <div class="hero__video-wrapper">
-      <video class="hero__video" controls playsinline preload="metadata">
-        <source src="https://phantom-presenter-assets.s3.amazonaws.com/Fusion%20Cell%20Overview%20Video%20%28540p%29.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="hero__content">
-      <h1 class="hero-headline hero__headline">Your World. <span class="hero__accent">Simplified.</span></h1>
-      <p class="hero__sub">One team replaces dozens of management relationships. One view consolidates everything. You stop being the integration layer.</p>
-      <a href="about.html" class="btn btn--outline">See How It Works</a>
-      <p class="hero__credibility">Managing over $14.4 billion in holdings worldwide.</p>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 class="hero-headline hero__headline">Your World. <span class="hero__accent">Simplified.</span></h1>
+        <p class="hero__sub">One team replaces dozens of management relationships. One view consolidates everything. You stop being the integration layer.</p>
+        <a href="about.html" class="btn btn--outline">See How It Works</a>
+        <p class="hero__credibility">Managing over $14.4 billion in holdings worldwide.</p>
+      </div>
+      <div class="hero__video-wrapper">
+        <video class="hero__video" controls playsinline preload="metadata">
+          <source src="https://phantom-presenter-assets.s3.amazonaws.com/Fusion%20Cell%20Overview%20Video%20%28540p%29.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
   </section>
 
-  <!-- The Cost of Fragmentation -->
-  <section class="section" aria-label="The cost of fragmentation">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="accent-line accent-line--center"></div>
-        <h2 class="section-heading">The Cost of Fragmentation</h2>
-      </div>
-      <div class="concept__text reveal">
-        <p>Every property, aircraft, vessel, and collection you own comes with its own management team, its own invoices, its own reporting format. Over time, you become the central coordinator — fielding calls, chasing updates, reconciling reports from dozens of separate providers.</p>
-      </div>
-      <div class="grid-3 reveal-stagger" style="margin-top: 48px;">
-        <div class="card stat-card reveal">
-          <div class="stat-card__label">The Time Tax</div>
-          <p class="stat-card__desc">Principal as the "integration layer" — 10-20 hours per week lost to coordination</p>
+  <!-- Lost Time Is Lost Revenue -->
+  <section class="lost-time" aria-label="Lost time is lost revenue">
+    <div class="lost-time__inner">
+      <h2 class="lost-time__headline reveal">Lost Time Is Lost Revenue</h2>
+      <p class="lost-time__subtitle reveal"><span class="lost-time__accent">Multiple</span> Invoices + <span class="lost-time__accent">Multiple</span> Reporting Formats + <span class="lost-time__accent">Multiple</span> Management Relationships</p>
+      <div class="lost-time__stats reveal-stagger">
+        <div class="lost-time__stat reveal">
+          <div class="lost-time__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p><span class="lost-time__label">The Time Tax:</span> <span class="lost-time__desc">Principal As The "Integration Layer" (10–20 Hrs/Week)</span></p>
         </div>
-        <div class="card stat-card reveal">
-          <div class="stat-card__label">The Fragmentation Tax</div>
-          <p class="stat-card__desc">+15-20% premium paid for disconnected oversight</p>
+        <div class="lost-time__stat reveal">
+          <div class="lost-time__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="6" x2="12" y2="18"/><path d="M9 10c0-1.1.9-2 3-2s3 .9 3 2-.9 2-3 2-3 .9-3 2 .9 2 3 2 3-.9 3-2"/></svg>
+          </div>
+          <p><span class="lost-time__label">The Fragmentation Tax:</span> <span class="lost-time__desc">+15–20% Premium For Disconnected Oversight</span></p>
         </div>
-        <div class="card stat-card reveal">
-          <div class="stat-card__label">The Data Risk</div>
-          <p class="stat-card__desc">20-30% higher error rates when data lives across disparate providers</p>
+        <div class="lost-time__stat reveal">
+          <div class="lost-time__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <p><span class="lost-time__label">The Data Risk:</span> <span class="lost-time__desc">20–30% Higher Error Rates From Disparate Providers</span></p>
         </div>
       </div>
-      <p class="source-attr reveal">— Deloitte &amp; Campden Wealth Global Family Office Report (2024)</p>
-      <p class="fragmentation-close reveal">Fragmentation isn't just inefficient — it's expensive and risky.</p>
+      <p class="lost-time__source reveal">— Source: Deloitte &amp; Campden - Wealth Global Family Office Report (2024)</p>
     </div>
   </section>
 
@@ -225,7 +227,7 @@
         <nav class="footer__links" aria-label="Footer navigation">
           <a href="index.html" class="footer__link">Home</a>
           <a href="about.html" class="footer__link">About</a>
-          <a href="services.html" class="footer__link">Services</a>
+          <a href="services.html" class="footer__link">Solutions</a>
           <a href="app.html" class="footer__link">The App</a>
           <a href="contact.html" class="footer__link">Contact</a>
         </nav>

@@ -2,19 +2,22 @@
 
 /* Hero */
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   padding: calc(var(--nav-height) + 72px) var(--container-padding) 100px;
-  gap: 64px;
   background: var(--color-bg);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 56px;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 /* Video Player */
 .hero__video-wrapper {
   width: 100%;
-  max-width: 960px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -30,7 +33,7 @@
 }
 
 .hero__content {
-  max-width: 800px;
+  text-align: left;
   animation: heroFadeIn 0.6s ease-out 0.5s both;
 }
 
@@ -59,7 +62,7 @@
   color: var(--color-text-secondary);
   line-height: 1.7;
   max-width: 620px;
-  margin: 0 auto 48px;
+  margin-bottom: 48px;
 }
 
 /* Scroll Indicator */
@@ -226,6 +229,157 @@
   color: var(--color-text-muted);
   margin-top: 20px;
   letter-spacing: 0.01em;
+}
+
+/* ======================== */
+/* Lost Time Is Lost Revenue */
+/* ======================== */
+
+.lost-time {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  background-image: url('https://phantom-presenter-assets.s3.us-east-1.amazonaws.com/lost_time.webp');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lost-time::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.3) 75%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.lost-time__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 100px) var(--container-padding);
+}
+
+.lost-time__headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.lost-time__subtitle {
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  color: var(--color-text);
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+
+.lost-time__accent {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.lost-time__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+  max-width: 620px;
+}
+
+.lost-time__stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.lost-time__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+}
+
+.lost-time__stat p {
+  margin: 0;
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  line-height: 1.5;
+}
+
+.lost-time__label {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.lost-time__desc {
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.lost-time__source {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .lost-time {
+    min-height: auto;
+    background-position: center;
+  }
+
+  .lost-time::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.75) 60%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  .lost-time__stats {
+    max-width: 100%;
+  }
+
+  .lost-time__stat {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .lost-time__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lost-time__icon svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Stat Cards */
@@ -402,6 +556,20 @@
 }
 
 @media (max-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero__content {
+    text-align: center;
+  }
+
+  .hero__sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .app-preview {
     grid-template-columns: 1fr;
     gap: 40px;
