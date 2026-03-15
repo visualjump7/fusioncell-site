@@ -417,9 +417,14 @@
   margin-right: auto;
 }
 
+/* Why Fusion Cell? section heading accent */
+.section--alt .section-heading__accent {
+  color: var(--color-accent);
+}
+
 /* Comparison Table */
 .comparison-table {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -428,7 +433,7 @@
 
 .comparison-table__header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(120px, 0.4fr) 1fr 1fr;
   background: var(--color-surface-elevated);
 }
 
@@ -438,6 +443,11 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.comparison-table__col-label--features {
+  color: var(--color-accent);
+  border-right: 1px solid var(--color-border);
 }
 
 .comparison-table__col-label--negative {
@@ -451,7 +461,7 @@
 
 .comparison-table__row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(120px, 0.4fr) 1fr 1fr;
   border-top: 1px solid var(--color-border);
 }
 
@@ -461,13 +471,40 @@
   line-height: 1.5;
 }
 
+.comparison-table__cell--feature {
+  color: var(--color-accent);
+  font-weight: 500;
+  border-right: 1px solid var(--color-border);
+}
+
 .comparison-table__cell--negative {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--color-text-muted);
   border-right: 1px solid var(--color-border);
 }
 
 .comparison-table__cell--positive {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--color-text-secondary);
+}
+
+.comparison-table__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparison-table__icon--negative {
+  color: #dc2626;
+}
+
+.comparison-table__icon--positive {
+  color: var(--color-accent);
 }
 
 /* Comparison Quote */
@@ -584,9 +621,24 @@
     grid-template-columns: 1fr;
   }
 
+  .comparison-table__col-label--features,
   .comparison-table__col-label--negative,
+  .comparison-table__cell--feature,
   .comparison-table__cell--negative {
     border-right: none;
     border-bottom: 1px solid var(--color-border);
+  }
+
+  .comparison-table__col-label:last-child,
+  .comparison-table__cell--positive {
+    border-bottom: none;
+  }
+
+  .comparison-table__row {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .comparison-table__row:first-of-type {
+    border-top: none;
   }
 }
