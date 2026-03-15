@@ -1,85 +1,116 @@
-/* About Page */
+/* About Page — How It Works */
 
-/* Hero */
-.about-hero {
+/* ─── How It Works Hero ─────────────────────────────────────── */
+.how-hero {
   padding: calc(var(--nav-height) + 80px) var(--container-padding) 80px;
+  background: var(--color-bg);
 }
 
-.about-hero .container {
-  max-width: none;
-  padding: 0;
+.how-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.about-hero__inner {
-  position: relative;
-  min-height: clamp(540px, 72vh, 820px);
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  box-shadow: 0 0 0 1px var(--color-border), 0 32px 80px rgba(0, 0, 0, 0.45);
+/* Left column */
+.how-hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-.about-hero__content {
-  position: absolute;
-  left: clamp(28px, 5vw, 72px);
-  right: clamp(28px, 5vw, 72px);
-  bottom: clamp(28px, 6vw, 72px);
-  z-index: 2;
-  max-width: 700px;
+.how-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
 }
 
-.about-hero__sub {
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 620px;
-  margin: 24px 0 0;
-  line-height: 1.7;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+.how-hero__desc {
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  max-width: 440px;
 }
 
-.about-hero__media {
-  position: absolute;
-  inset: 0;
+/* Right column: diagram */
+.how-hero__diagram {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.about-hero__image {
-  display: block;
+.how-hero__diagram .data-flow-v2 {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  max-width: 560px;
 }
 
-.about-hero__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.56) 38%, rgba(0, 0, 0, 0.2) 72%, rgba(0, 0, 0, 0.08) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.18) 55%, rgba(0, 0, 0, 0.48) 100%);
-}
+/* Responsive */
+@media (max-width: 900px) {
+  .how-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
 
-.about-hero__content .hero-headline {
-  max-width: 11ch;
-  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  .how-hero__desc {
+    max-width: 100%;
+  }
+
+  .how-hero__diagram {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .how-hero__diagram .data-flow-v2 {
+    max-width: 100%;
+  }
 }
 
 /* Philosophy */
 .philosophy__content {
   max-width: 720px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy .section-heading {
+  font-size: clamp(4rem, 6vw, 6rem);
+  letter-spacing: -0.03em;
 }
 
 .philosophy__content p {
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  font-size: clamp(1.05rem, 1.54vw, 1.575rem);
   color: var(--color-text-secondary);
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 24px;
 }
 
-.philosophy__content p:last-child {
-  margin-bottom: 0;
+.philosophy__content p:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* Philosophy Pull Quote */
+.philosophy__pullquote {
+  max-width: 800px;
+  margin: 64px auto 0;
+  text-align: center;
+}
+
+.philosophy__pullquote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+.philosophy__pullquote strong {
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 /* Assembly Timeline */
@@ -108,8 +139,9 @@
 
 .timeline__title {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: clamp(1.5rem, 2vw, 1.75rem);
   font-weight: 600;
+  letter-spacing: -0.02em;
   margin-bottom: 8px;
 }
 
@@ -148,39 +180,85 @@
   line-height: 1.7;
 }
 
-/* Philosophy credibility line */
-.philosophy__credibility {
-  margin-top: 32px;
-  font-size: clamp(1rem, 1.2vw, 1.0625rem);
-  color: var(--color-accent);
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
-/* Data Flow Diagram */
-.data-flow {
-  max-width: 520px;
+/* Data Flow Diagram v2 */
+.data-flow-v2 {
+  max-width: 680px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.data-flow__tier {
+/* Source project boxes */
+.data-flow-v2__sources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   width: 100%;
+}
+
+.data-flow-v2__source-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.data-flow-v2__source {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  cursor: default;
+  transition: background var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+}
+
+.data-flow-v2__source:hover {
+  background: var(--color-accent-glow);
+  border-color: rgba(74, 222, 128, 0.4);
+  color: var(--color-accent);
+}
+
+/* Rows */
+.data-flow-v2__row {
+  width: 100%;
+}
+
+.data-flow-v2__row--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Cards */
+.data-flow-v2__card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 24px 28px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.data-flow__tier--principal {
-  border-color: rgba(74, 222, 128, 0.3);
-  background: var(--color-accent-glow);
+.data-flow-v2__card--foundation {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
-.data-flow__tier-label {
+.data-flow-v2__card--principal {
+  max-width: 320px;
+  margin: 0 auto;
+  border-color: var(--color-accent);
+  background: var(--color-surface);
+}
+
+.data-flow-v2__label {
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -189,7 +267,7 @@
   margin-bottom: 6px;
 }
 
-.data-flow__tier-title {
+.data-flow-v2__title {
   font-family: var(--font-display);
   font-size: 1.0625rem;
   font-weight: 600;
@@ -197,21 +275,35 @@
   color: var(--color-text);
 }
 
-.data-flow__tier-desc {
-  font-size: 0.875rem;
+.data-flow-v2__desc {
+  font-size: 0.8125rem;
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin: 0;
 }
 
-.data-flow__connector {
-  width: 1px;
-  height: 36px;
-  background: linear-gradient(to bottom, var(--color-border), rgba(74, 222, 128, 0.4));
-  position: relative;
+/* Output badge inside split cards */
+.data-flow-v2__output {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
 }
 
-.data-flow__connector::after {
+/* Single vertical connector (with arrowhead) */
+.data-flow-v2__connector-single {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+  position: relative;
+  margin: 16px auto;
+}
+
+.data-flow-v2__connector-single::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -219,16 +311,66 @@
   transform: translateX(-50%);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 6px solid rgba(74, 222, 128, 0.4);
+  border-top: 6px solid var(--color-border);
 }
 
-.data-flow__note {
-  text-align: center;
-  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-  max-width: 640px;
-  margin: 48px auto 0;
+/* Converge connector: two arms → single arrow down
+   Card centers sit at ~24% (left) and ~76% (right) of container width
+   (based on 1fr 1fr grid with 32px gap at max 680px) */
+.data-flow-v2__converge {
+  position: relative;
+  width: 100%;
+  height: 64px;
+  align-self: stretch;
+  margin: 16px 0;
+}
+
+/* Left arm: vertical down from left card center, then horizontal right to center */
+.data-flow-v2__converge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(25% - 8px);
+  width: calc(25% + 9px);
+  height: 50%;
+  border-left: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-bottom-left-radius: 3px;
+}
+
+/* Right arm: vertical down from right card center, then horizontal left to center */
+.data-flow-v2__converge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: calc(25% - 8px);
+  width: calc(25% + 9px);
+  height: 50%;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-bottom-right-radius: 3px;
+}
+
+/* Center vertical line with arrowhead */
+.data-flow-v2__converge-down {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 50%;
+  background: var(--color-border);
+}
+
+.data-flow-v2__converge-down::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-border);
 }
 
 @media (max-width: 768px) {
@@ -270,5 +412,42 @@
   .timeline__step {
     grid-template-columns: 48px 1fr;
     gap: 20px;
+  }
+
+  .data-flow-v2__row--split {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .data-flow-v2__row--split .data-flow-v2__card:first-child {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    border-bottom: none;
+  }
+
+  .data-flow-v2__row--split .data-flow-v2__card:last-child {
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+
+  .data-flow-v2__sources {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .data-flow-v2__converge {
+    height: 40px;
+  }
+
+  .data-flow-v2__converge::before {
+    left: 0;
+    width: calc(50% + 1px);
+  }
+
+  .data-flow-v2__converge::after {
+    right: 0;
+    width: calc(50% + 1px);
+  }
+
+  .data-flow-v2__card--foundation,
+  .data-flow-v2__card--principal {
+    max-width: none;
   }
 }

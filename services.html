@@ -30,7 +30,7 @@
     <div class="nav__inner">
       <a href="index.html" class="nav__wordmark">Fusion Cell</a>
       <div class="nav__links">
-        <a href="about.html" class="nav__link">About</a>
+        <a href="about.html" class="nav__link">How It Works</a>
         <a href="services.html" class="nav__link nav__link--active">Solutions</a>
         <a href="app.html" class="nav__link">The App</a>
         <a href="contact.html" class="nav__link">Contact</a>
@@ -46,19 +46,63 @@
 
   <div class="nav__mobile" aria-hidden="true">
     <a href="index.html" class="nav__mobile-link">Home</a>
-    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="about.html" class="nav__mobile-link">How It Works</a>
     <a href="services.html" class="nav__mobile-link nav__mobile-link--active">Solutions</a>
     <a href="app.html" class="nav__mobile-link">The App</a>
     <a href="contact.html" class="nav__mobile-link">Contact</a>
   </div>
 
-  <!-- Hero -->
-  <section class="services-hero" aria-label="Services introduction">
-    <div class="container">
-      <div class="reveal">
-        <h1 class="hero-headline">Expertise Configured to Your Holdings</h1>
-        <p class="services-hero__sub">Two modes of operation. One unified view.</p>
+  <!-- Hero Slider -->
+  <section class="solutions-hero" aria-label="Solutions introduction">
+    <div class="solutions-hero__slider" role="region" aria-label="Solutions slideshow">
+
+      <!-- Slide 1 -->
+      <div class="solutions-hero__slide solutions-hero__slide--active">
+        <div class="solutions-hero__bg">
+          <img src="assets/daily_brief.webp" alt="Fusion Cell daily brief interface" class="solutions-hero__img">
+        </div>
+        <div class="solutions-hero__overlay"></div>
+        <div class="container solutions-hero__content">
+          <h1 class="solutions-hero__title">Complexity Is the Problem.<br><span class="text-accent">We're the Solution.</span></h1>
+          <p class="solutions-hero__sub">You shouldn't have to be your own integration layer.</p>
+          <a href="contact.html" class="btn btn--filled">Start a Conversation</a>
+        </div>
       </div>
+
+      <!-- Slide 2 -->
+      <div class="solutions-hero__slide">
+        <div class="solutions-hero__bg">
+          <img src="assets/thumbnail.webp" alt="Fusion Cell holdings overview" class="solutions-hero__img">
+        </div>
+        <div class="solutions-hero__overlay"></div>
+        <div class="container solutions-hero__content">
+          <h1 class="solutions-hero__title">One Team.<br><span class="text-accent">Every Holding.</span></h1>
+          <p class="solutions-hero__sub">Directors, managers, and specialists assembled around what you actually own.</p>
+          <a href="contact.html" class="btn btn--filled">Start a Conversation</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="solutions-hero__slide">
+        <div class="solutions-hero__bg solutions-hero__bg--dark"></div>
+        <div class="container solutions-hero__content">
+          <h1 class="solutions-hero__title">One Source of Truth.<br><span class="text-accent">Zero Gaps.</span></h1>
+          <p class="solutions-hero__sub">Every holding. Every vendor. Every obligation — verified, standardized, and in one place.</p>
+          <a href="contact.html" class="btn btn--filled">Start a Conversation</a>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="solutions-hero__prev" aria-label="Previous slide">&#8592;</button>
+      <button class="solutions-hero__next" aria-label="Next slide">&#8594;</button>
+
+      <!-- Dots -->
+      <div class="solutions-hero__dots" role="tablist" aria-label="Slide navigation">
+        <button class="solutions-hero__dot solutions-hero__dot--active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+        <button class="solutions-hero__dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+        <button class="solutions-hero__dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+      </div>
+
     </div>
   </section>
 
@@ -266,7 +310,7 @@
         <div class="footer__wordmark">Fusion Cell</div>
         <nav class="footer__links" aria-label="Footer navigation">
           <a href="index.html" class="footer__link">Home</a>
-          <a href="about.html" class="footer__link">About</a>
+          <a href="about.html" class="footer__link">How It Works</a>
           <a href="services.html" class="footer__link">Solutions</a>
           <a href="app.html" class="footer__link">The App</a>
           <a href="contact.html" class="footer__link">Contact</a>
@@ -277,5 +321,42 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const slider = document.querySelector('.solutions-hero__slider');
+      if (!slider) return;
+      const slides = slider.querySelectorAll('.solutions-hero__slide');
+      const dots = slider.querySelectorAll('.solutions-hero__dot');
+      let current = 0;
+      let timer;
+
+      function goTo(index) {
+        slides[current].classList.remove('solutions-hero__slide--active');
+        dots[current].classList.remove('solutions-hero__dot--active');
+        dots[current].setAttribute('aria-selected', 'false');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('solutions-hero__slide--active');
+        dots[current].classList.add('solutions-hero__dot--active');
+        dots[current].setAttribute('aria-selected', 'true');
+      }
+
+      function startAuto() {
+        timer = setInterval(() => goTo(current + 1), 6000);
+      }
+
+      function resetAuto() {
+        clearInterval(timer);
+        startAuto();
+      }
+
+      slider.querySelector('.solutions-hero__prev').addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+      slider.querySelector('.solutions-hero__next').addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+      dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetAuto(); }));
+
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        startAuto();
+      }
+    })();
+  </script>
 </body>
 </html>

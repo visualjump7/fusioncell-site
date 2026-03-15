@@ -208,21 +208,6 @@
   margin-top: 8px;
 }
 
-/* CTA Closing */
-.cta-closing {
-  text-align: center;
-}
-
-.cta-closing .section-heading {
-  margin-bottom: 16px;
-}
-
-.cta-closing p {
-  color: var(--color-text-secondary);
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
-  margin-bottom: 40px;
-}
-
 /* Hero credibility line */
 .hero__credibility {
   font-size: 0.8125rem;

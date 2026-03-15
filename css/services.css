@@ -1,22 +1,181 @@
 /* Services Page */
 
-/* Hero */
-.services-hero {
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: calc(var(--nav-height) + 80px) var(--container-padding) 80px;
+/* ─── Hero Slider ──────────────────────────────────────────── */
+.solutions-hero {
+  padding: calc(var(--nav-height) + 40px) var(--container-padding) 40px;
 }
 
-.services-hero__sub {
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-  color: var(--color-text-secondary);
-  max-width: 640px;
-  margin: 24px auto 0;
+.solutions-hero__slider {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.45);
+  min-height: clamp(480px, 68vh, 780px);
+}
+
+/* Slides */
+.solutions-hero__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  pointer-events: none;
+}
+
+.solutions-hero__slide--active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  min-height: clamp(480px, 68vh, 780px);
+}
+
+/* Background image */
+.solutions-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.solutions-hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Dark abstract bg for image-less slide */
+.solutions-hero__bg--dark {
+  background:
+    radial-gradient(ellipse 70% 60% at 70% 50%, rgba(74, 222, 128, 0.06) 0%, transparent 70%),
+    linear-gradient(160deg, #0d0d0d 0%, #111111 100%);
+}
+
+/* Overlay gradient */
+.solutions-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0.08) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Content: title → copy → CTA stacked above image */
+.solutions-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: clamp(48px, 7vw, 96px);
+  padding-top: clamp(48px, 7vw, 96px);
+  max-width: var(--container-max);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.solutions-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  max-width: 16ch;
+  text-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.solutions-hero__sub {
+  font-size: clamp(1rem, 1.4vw, 1.1875rem);
+  color: rgba(255,255,255,0.82);
+  max-width: 520px;
   line-height: 1.7;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+/* Prev / Next buttons */
+.solutions-hero__prev,
+.solutions-hero__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background var(--transition-base), border-color var(--transition-base);
+  backdrop-filter: blur(8px);
+}
+
+.solutions-hero__prev { left: 20px; }
+.solutions-hero__next { right: 20px; }
+
+.solutions-hero__prev:hover,
+.solutions-hero__next:hover {
+  background: rgba(74, 222, 128, 0.15);
+  border-color: var(--color-accent);
+}
+
+/* Dot indicators */
+.solutions-hero__dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.solutions-hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-base), transform var(--transition-base);
+  padding: 0;
+}
+
+.solutions-hero__dot--active {
+  background: var(--color-accent);
+  transform: scale(1.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solutions-hero__slide {
+    transition: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .solutions-hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .solutions-hero__slider {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .solutions-hero__title {
+    font-size: clamp(1.875rem, 7vw, 2.5rem);
+  }
 }
 
 /* Domain Section */

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Fusion Cell</title>
-  <meta name="description" content="Fusion Cell exists because principals with complex holdings shouldn't have to be their own integration layer. One team. One source of truth.">
-  <meta property="og:title" content="About — Fusion Cell">
-  <meta property="og:description" content="Complexity is the problem. We're the solution. One dedicated team, one verified view.">
+  <title>How It Works — Fusion Cell</title>
+  <meta name="description" content="How Fusion Cell works. The Principal receives a daily report from the Director but maintains 24/7 direct access to the Data Portal — always verifiable, transparent, and redundant.">
+  <meta property="og:title" content="How It Works — Fusion Cell">
+  <meta property="og:description" content="Two paths. One verified source. Trust, but verify. See how Fusion Cell's information flow keeps you in control.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About — Fusion Cell">
-  <meta name="twitter:description" content="Complexity is the problem. We're the solution. One dedicated team, one verified view.">
+  <meta name="twitter:title" content="How It Works — Fusion Cell">
+  <meta name="twitter:description" content="Two paths. One verified source. Trust, but verify. See how Fusion Cell's information flow keeps you in control.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
     <div class="nav__inner">
       <a href="index.html" class="nav__wordmark">Fusion Cell</a>
       <div class="nav__links">
-        <a href="about.html" class="nav__link nav__link--active">About</a>
+        <a href="about.html" class="nav__link nav__link--active">How It Works</a>
         <a href="services.html" class="nav__link">Solutions</a>
         <a href="app.html" class="nav__link">The App</a>
         <a href="contact.html" class="nav__link">Contact</a>
@@ -46,23 +46,92 @@
 
   <div class="nav__mobile" aria-hidden="true">
     <a href="index.html" class="nav__mobile-link">Home</a>
-    <a href="about.html" class="nav__mobile-link nav__mobile-link--active">About</a>
+    <a href="about.html" class="nav__mobile-link nav__mobile-link--active">How It Works</a>
     <a href="services.html" class="nav__mobile-link">Solutions</a>
     <a href="app.html" class="nav__mobile-link">The App</a>
     <a href="contact.html" class="nav__mobile-link">Contact</a>
   </div>
 
   <!-- Hero -->
-  <section class="about-hero" aria-label="About introduction">
+  <section class="how-hero" aria-label="How Fusion Cell Works">
     <div class="container">
-      <div class="about-hero__inner reveal">
-        <div class="about-hero__media">
-          <img src="assets/daily_brief.webp" alt="Preview of the Fusion Cell daily brief interface" class="about-hero__image">
+      <div class="how-hero__inner reveal">
+
+        <!-- Left: Title + description -->
+        <div class="how-hero__left">
+          <h1 class="how-hero__title">How<br><span class="text-accent">Fusion Cell</span><br>Works</h1>
+          <p class="how-hero__desc">The Principal receives a daily report from the Director but maintains 24/7 direct access to the Data Portal. This ensures the information you receive is always verifiable, transparent, and redundant.</p>
         </div>
-        <div class="about-hero__overlay"></div>
-        <div class="about-hero__content">
-          <h1 class="hero-headline">Complexity Is the Problem. <span class="text-accent">We're the Solution.</span></h1>
-          <p class="about-hero__sub">Fusion Cell exists because principals with complex holdings shouldn't have to be their own integration layer.</p>
+
+        <!-- Right: data flow diagram (moved from How Information Flows section) -->
+        <div class="how-hero__diagram">
+          <div class="data-flow-v2">
+
+            <!-- Row 0: Source project boxes (2 / 4 / 3 cluster) -->
+            <div class="data-flow-v2__sources">
+              <div class="data-flow-v2__source-row">
+                <div class="data-flow-v2__source">Project</div>
+                <div class="data-flow-v2__source">Project</div>
+              </div>
+              <div class="data-flow-v2__source-row">
+                <div class="data-flow-v2__source">Project</div>
+                <div class="data-flow-v2__source">Project</div>
+                <div class="data-flow-v2__source">Project</div>
+                <div class="data-flow-v2__source">Project</div>
+              </div>
+              <div class="data-flow-v2__source-row">
+                <div class="data-flow-v2__source">Project</div>
+                <div class="data-flow-v2__source">Project</div>
+                <div class="data-flow-v2__source">Project</div>
+              </div>
+            </div>
+
+            <!-- Connector: sources → PM -->
+            <div class="data-flow-v2__connector-single" aria-hidden="true"></div>
+
+            <!-- Row 1: Foundation -->
+            <div class="data-flow-v2__row">
+              <div class="data-flow-v2__card data-flow-v2__card--foundation">
+                <div class="data-flow-v2__label">Foundation</div>
+                <div class="data-flow-v2__title">Fusion Cell Project Management</div>
+                <p class="data-flow-v2__desc">Verifies and standardizes all field inputs before anything enters the system.</p>
+              </div>
+            </div>
+
+            <!-- Connector: PM → split row -->
+            <div class="data-flow-v2__connector-single" aria-hidden="true"></div>
+
+            <!-- Row 2: Data Portal + Director -->
+            <div class="data-flow-v2__row data-flow-v2__row--split">
+              <div class="data-flow-v2__card">
+                <div class="data-flow-v2__label">System of Record</div>
+                <div class="data-flow-v2__title">Fusion Cell Data Portal</div>
+                <p class="data-flow-v2__desc">Secure, verified data. Every input validated before it reaches you.</p>
+                <div class="data-flow-v2__output">24/7 Direct Access</div>
+              </div>
+              <div class="data-flow-v2__card">
+                <div class="data-flow-v2__label">Synthesis</div>
+                <div class="data-flow-v2__title">Fusion Cell Director</div>
+                <p class="data-flow-v2__desc">Synthesizes priorities and risks across all holdings.</p>
+                <div class="data-flow-v2__output">Daily Executive Brief</div>
+              </div>
+            </div>
+
+            <!-- Converge connector: two lines → one arrow down -->
+            <div class="data-flow-v2__converge" aria-hidden="true">
+              <div class="data-flow-v2__converge-down"></div>
+            </div>
+
+            <!-- Row 3: Principal -->
+            <div class="data-flow-v2__row">
+              <div class="data-flow-v2__card data-flow-v2__card--principal">
+                <div class="data-flow-v2__label">Principal</div>
+                <div class="data-flow-v2__title">You</div>
+                <p class="data-flow-v2__desc">Two paths. One verified source. Trust, but verify.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
@@ -76,11 +145,12 @@
         <h2 class="section-heading">Why Fusion Cell Exists</h2>
       </div>
       <div class="philosophy__content reveal">
-        <p>Success creates complexity. Every property, aircraft, vessel, and collection you acquire comes with its own management team, its own vendor relationships, its own invoices, and its own reporting format. Over time, you — the principal — become the central coordinator. You spend 10 to 20 hours a week just keeping track of everything.</p>
-        <p>That's the fragmentation tax. It costs you time, it costs you money, and it creates risk. When information lives in dozens of separate systems with dozens of separate providers, errors compound and problems surface late.</p>
-        <p>Fusion Cell was built to eliminate that. We consolidate all operational complexity into one team, one data structure, and one verified view. You go from managing dozens of relationships to managing one. We become the integration layer so you don't have to be.</p>
-        <p>The result: a dedicated team that works for you, backed by a private application where you can verify everything at any time. One relationship. One source of truth.</p>
-        <p class="philosophy__credibility">Fusion Cell has been deployed to manage over $14.4 billion in holdings worldwide.</p>
+        <p>Success creates complexity. Every holding comes with its own management team, invoices, and reporting format. You become the coordinator — and that fragmentation costs you time, money, and risk.</p>
+        <p>Fusion Cell consolidates everything into one team, one data structure, and one verified view. One relationship. One source of truth.</p>
+        <a href="contact.html" class="btn btn--filled">Get in Touch</a>
+      </div>
+      <div class="philosophy__pullquote reveal">
+        <p>Fusion Cell has been deployed to manage over <strong>$14.4 billion</strong> in holdings worldwide.</p>
       </div>
     </div>
   </section>
@@ -96,28 +166,28 @@
           <div class="timeline__number">01</div>
           <div>
             <h3 class="timeline__title">Assessment</h3>
-            <p class="timeline__desc">We map the full scope of your holdings — every property, vehicle, vessel, aircraft, collection, and obligation. We identify every existing management relationship, vendor, and reporting channel. The goal: understand the full picture of what you own and who's currently managing it.</p>
+            <p class="timeline__desc">We map every holding, obligation, vendor, and reporting channel.</p>
           </div>
         </div>
         <div class="timeline__step reveal">
           <div class="timeline__number">02</div>
           <div>
             <h3 class="timeline__title">Consolidation</h3>
-            <p class="timeline__desc">We determine which holdings require direct management and which require visibility into existing teams. Your Fusion Cell is configured to handle both — active operations where needed, read-only integration where it makes sense.</p>
+            <p class="timeline__desc">We determine what needs direct management and what needs visibility — then configure both.</p>
           </div>
         </div>
         <div class="timeline__step reveal">
           <div class="timeline__number">03</div>
           <div>
             <h3 class="timeline__title">Configuration</h3>
-            <p class="timeline__desc">Your data structure, reporting cadence, communication preferences, and app experience are tailored to you. How much detail you want, how often you want to be contacted, what triggers an escalation — all on your terms.</p>
+            <p class="timeline__desc">Reporting cadence, communication preferences, and app experience — all tailored to you.</p>
           </div>
         </div>
         <div class="timeline__step reveal">
           <div class="timeline__number">04</div>
           <div>
             <h3 class="timeline__title">Ongoing Operations</h3>
-            <p class="timeline__desc">Your team operates continuously. They verify and standardize all incoming data, manage active operations, surface issues proactively, and deliver a daily executive brief. The app gives you 24/7 verified access to everything.</p>
+            <p class="timeline__desc">Verified data, proactive issue tracking, and a daily executive brief from your Director.</p>
           </div>
         </div>
       </div>
@@ -135,55 +205,30 @@
         <div class="card team-card reveal">
           <div class="team-card__role">Strategic Oversight</div>
           <h3 class="team-card__title">Fusion Cell Director</h3>
-          <p class="team-card__desc">Your single point of contact. Synthesizes priorities and risks across all holdings. Delivers your daily executive brief.</p>
+          <p class="team-card__desc">Your single point of contact. Delivers your daily executive brief.</p>
         </div>
         <div class="card team-card reveal">
           <div class="team-card__role">Data Architecture</div>
           <h3 class="team-card__title">Project Management</h3>
-          <p class="team-card__desc">Verifies and standardizes all field inputs. Validates data before it enters the portal. Coordinates with all vendors and existing teams.</p>
+          <p class="team-card__desc">Verifies and standardizes all data before it reaches your view.</p>
         </div>
         <div class="card team-card reveal">
           <div class="team-card__role">Operations</div>
           <h3 class="team-card__title">Domain Specialists</h3>
-          <p class="team-card__desc">Configured to your specific holdings — aviation, maritime, facilities, security. Only the expertise your situation requires. No unnecessary overhead.</p>
+          <p class="team-card__desc">Aviation, maritime, facilities, security — only the expertise you need.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How Information Flows -->
-  <section class="section section--alt" aria-label="Data flow">
+  <!-- CTA Closing -->
+  <section class="section" aria-label="Get in touch">
     <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-heading">How Information Flows</h2>
-        <p class="text-secondary">Verified, standardized, and redundant. The information you receive is always trustworthy.</p>
+      <div class="cta-closing reveal">
+        <h2 class="section-heading">Stop Managing Your Managers</h2>
+        <p>Start a conversation about simplifying your world.</p>
+        <a href="contact.html" class="btn btn--filled">Get in Touch</a>
       </div>
-      <div class="data-flow reveal">
-        <div class="data-flow__tier">
-          <div class="data-flow__tier-label">Foundation</div>
-          <div class="data-flow__tier-title">Fusion Cell Project Management</div>
-          <p class="data-flow__tier-desc">Verifies and standardizes all field inputs. Validates data before it enters the portal.</p>
-        </div>
-        <div class="data-flow__connector" aria-hidden="true"></div>
-        <div class="data-flow__tier">
-          <div class="data-flow__tier-label">System of Record</div>
-          <div class="data-flow__tier-title">Fusion Cell Data Portal</div>
-          <p class="data-flow__tier-desc">Secure system of record. Verifiable data. Your 24/7 access point.</p>
-        </div>
-        <div class="data-flow__connector" aria-hidden="true"></div>
-        <div class="data-flow__tier">
-          <div class="data-flow__tier-label">Synthesis</div>
-          <div class="data-flow__tier-title">Fusion Cell Director</div>
-          <p class="data-flow__tier-desc">Synthesizes priorities and risks. Delivers your daily executive brief.</p>
-        </div>
-        <div class="data-flow__connector" aria-hidden="true"></div>
-        <div class="data-flow__tier data-flow__tier--principal">
-          <div class="data-flow__tier-label">Principal</div>
-          <div class="data-flow__tier-title">You</div>
-          <p class="data-flow__tier-desc">Daily brief + 24/7 direct portal access</p>
-        </div>
-      </div>
-      <p class="data-flow__note reveal">You receive a daily report from your Director but maintain 24/7 direct access to the Data Portal. This ensures the information you receive is always verifiable, transparent, and redundant.</p>
     </div>
   </section>
 
@@ -194,7 +239,7 @@
         <div class="footer__wordmark">Fusion Cell</div>
         <nav class="footer__links" aria-label="Footer navigation">
           <a href="index.html" class="footer__link">Home</a>
-          <a href="about.html" class="footer__link">About</a>
+          <a href="about.html" class="footer__link">How It Works</a>
           <a href="services.html" class="footer__link">Solutions</a>
           <a href="app.html" class="footer__link">The App</a>
           <a href="contact.html" class="footer__link">Contact</a>
