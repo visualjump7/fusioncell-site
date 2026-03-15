@@ -163,8 +163,8 @@
 
 /* Card — horizontal layout */
 .domain-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
   padding: 16px 20px;
   display: flex;
@@ -176,12 +176,14 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   font-family: inherit;
   color: inherit;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .domain-card:hover {
   border-color: var(--color-accent);
   box-shadow: 0 0 20px rgba(74, 222, 128, 0.1);
-  background: var(--color-surface-elevated);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 /* Icon container */
