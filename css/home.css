@@ -450,6 +450,11 @@
   border-top: 1px solid var(--color-border);
 }
 
+/* On desktop the values wrapper is invisible — cells flow in the grid naturally */
+.comparison-table__values {
+  display: contents;
+}
+
 .comparison-table__cell {
   padding: 16px 24px;
   font-size: 0.9375rem;
@@ -602,29 +607,91 @@
     order: -1;
   }
 
-  .comparison-table__header,
-  .comparison-table__row {
-    grid-template-columns: 1fr;
+
+  /* Hide the desktop column header on mobile — labels go inline per card */
+  .comparison-table__header {
+    display: none;
   }
 
-  .comparison-table__col-label--features,
-  .comparison-table__col-label--negative,
-  .comparison-table__cell--feature,
-  .comparison-table__cell--negative {
+  .comparison-table {
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .comparison-table__row {
+    display: flex !important;
+    flex-direction: column;
+    border-top: none;
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .comparison-table__row:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Values wrapper becomes a side-by-side flex row */
+  .comparison-table__values {
+    display: flex !important;
+  }
+
+  /* Feature label becomes a bold full-width header strip */
+  .comparison-table__cell--feature {
     border-right: none;
     border-bottom: 1px solid var(--color-border);
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--color-accent);
+    background: var(--color-surface-elevated);
   }
 
-  .comparison-table__col-label:last-child,
+  .comparison-table__cell--negative,
   .comparison-table__cell--positive {
+    flex: 1;
+    padding: 14px 14px 16px;
+    font-size: 0.8125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    border-right: none;
     border-bottom: none;
   }
 
-  .comparison-table__row {
-    border-top: 1px solid var(--color-border);
+  .comparison-table__cell--negative {
+    border-right: 1px solid var(--color-border);
   }
 
-  .comparison-table__row:first-of-type {
-    border-top: none;
+  /* Mini column labels injected above each value */
+  .comparison-table__cell--negative::before {
+    content: "Traditional";
+    display: block;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+  }
+
+  .comparison-table__cell--positive::before {
+    content: "Fusion Cell";
+    display: block;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+  }
+
+  .comparison-table__col-label--features,
+  .comparison-table__col-label--negative {
+    border-right: none;
+    border-bottom: none;
   }
 }
