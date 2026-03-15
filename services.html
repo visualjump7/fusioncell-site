@@ -75,110 +75,86 @@
   </section>
 
   <!-- Family Holdings — Managed Services -->
-  <section class="section" aria-label="Family holdings managed services">
+  <section class="section section--bg-image" aria-label="Family holdings managed services" style="background-image: url('assets/family_holdings.webp');">
+    <div class="section--bg-image__overlay"></div>
     <div class="container">
       <div class="services-mode-header reveal">
         <div class="services-mode-badge">Managed Services</div>
         <h2 class="section-heading">Family Holdings</h2>
         <p class="services-mode-desc">Active operations. Bidirectional data flow. Your Fusion Cell manages these directly — coordinating with all vendors, verifying all inputs, and reporting to you. You stop being the coordinator.</p>
-        <a href="contact.html" class="btn btn--filled">Start a Conversation</a>
       </div>
 
-      <!-- Family Office -->
-      <div class="domain reveal">
-        <div class="domain__content">
-          <div class="domain__label">Family Office — Expenditure &amp; Admin</div>
-          <h3 class="domain__title">Consolidated Household Operations</h3>
-          <p class="domain__desc">Household operations, staff coordination, expenditure tracking, and administrative oversight. Your team consolidates family office operations into one managed workflow — replacing the patchwork of separate relationships and reporting formats.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Expenditure tracking and budget management</span>
-            <span class="domain__capability">Staff coordination and vendor management</span>
-            <span class="domain__capability">Administrative oversight and compliance</span>
-            <span class="domain__capability">Consolidated reporting into your view</span>
-          </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><rect x="12" y="10" width="40" height="44" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="22" x2="44" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="30" x2="44" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="38" x2="36" y2="38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-      </div>
+      <!-- Domain card grid -->
+      <div class="domain-grid domain-grid--family">
 
-      <!-- Aviation -->
-      <div class="domain domain--reverse reveal">
-        <div class="domain__content">
-          <div class="domain__label">Aviation — Part 91 &amp; Part 135</div>
-          <h3 class="domain__title">Full Cost-of-Ownership Visibility</h3>
-          <p class="domain__desc">Aircraft ownership, operating budgets, maintenance schedules, crew management, fuel costs, hangar agreements. Your team manages every element and presents you with a clear picture of what your aircraft costs to own and operate — without you assembling it yourself.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Operating budget and cost-per-hour tracking</span>
-            <span class="domain__capability">Maintenance schedule and compliance oversight</span>
-            <span class="domain__capability">Crew coordination and management</span>
-            <span class="domain__capability">Hangar, fuel, and insurance management</span>
+        <button class="domain-card" data-domain="family-office" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect x="12" y="10" width="40" height="44" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="22" x2="44" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="30" x2="44" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="38" x2="36" y2="38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><path d="M32 8v48M20 32l-12 8v4l12-4v12l-4 3v2l8-2 8 2v-2l-4-3V40l12 4v-4l-12-8V8l-4-4-4 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        </div>
-      </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Family Office</h3>
+            <span class="domain-card__sub">Expenditure &amp; Admin</span>
+          </div>
+        </button>
 
-      <!-- Maritime -->
-      <div class="domain reveal">
-        <div class="domain__content">
-          <div class="domain__label">Maritime — Yachting &amp; Commercial</div>
-          <h3 class="domain__title">Vessels Managed Season to Season</h3>
-          <p class="domain__desc">Vessels, dock fees, crew management, maintenance cycles, insurance, and seasonal operations. Your maritime specialist keeps everything running — so you're never chasing updates across half a dozen separate contractors.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Dock fees and marina coordination</span>
-            <span class="domain__capability">Crew management and scheduling</span>
-            <span class="domain__capability">Maintenance cycles and refit planning</span>
-            <span class="domain__capability">Insurance and registration compliance</span>
+        <button class="domain-card" data-domain="aviation" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 8v48M20 32l-12 8v4l12-4v12l-4 3v2l8-2 8 2v-2l-4-3V40l12 4v-4l-12-8V8l-4-4-4 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
           </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><path d="M8 44c4-4 8-4 12 0s8 4 12 0 8-4 12 0 8 4 12 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 40V20l16-8 16 8v20" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="32" y1="12" x2="32" y2="40" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-      </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Aviation</h3>
+            <span class="domain-card__sub">Part 91 &amp; Part 135</span>
+          </div>
+        </button>
 
-      <!-- Facilities -->
-      <div class="domain domain--reverse reveal">
-        <div class="domain__content">
-          <div class="domain__label">Facilities — Estates &amp; Infrastructure</div>
-          <h3 class="domain__title">Every Property, Fully Managed</h3>
-          <p class="domain__desc">Residential properties, vacation homes, commercial facilities, and estate infrastructure. Maintenance, vendor coordination, insurance, and budget management — all handled by your team. Current valuations, scheduled upkeep, and nothing missed.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Maintenance scheduling and vendor coordination</span>
-            <span class="domain__capability">Operating budget management</span>
-            <span class="domain__capability">Insurance and tax obligation tracking</span>
-            <span class="domain__capability">Property valuations and market tracking</span>
+        <button class="domain-card" data-domain="maritime" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 44c4-4 8-4 12 0s8 4 12 0 8-4 12 0 8 4 12 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 40V20l16-8 16 8v20" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="32" y1="12" x2="32" y2="40" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><rect x="12" y="24" width="40" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 28l24-16 24 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="26" y="38" width="12" height="14" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-      </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Maritime</h3>
+            <span class="domain-card__sub">Yachting &amp; Commercial</span>
+          </div>
+        </button>
 
-      <!-- Security -->
-      <div class="domain reveal">
-        <div class="domain__content">
-          <div class="domain__label">Security — Private &amp; Industrial</div>
-          <h3 class="domain__title">Coordinated Across All Holdings and Locations</h3>
-          <p class="domain__desc">Physical security coordination, risk assessment, and protective services management across all holdings and locations. Your team maintains oversight of security protocols — so risks are identified proactively and responses are coordinated, not reactive.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Physical security coordination</span>
-            <span class="domain__capability">Risk assessment and monitoring</span>
-            <span class="domain__capability">Protective services management</span>
-            <span class="domain__capability">Cross-holdings security protocol oversight</span>
+        <button class="domain-card" data-domain="facilities" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect x="12" y="24" width="40" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 28l24-16 24 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="26" y="38" width="12" height="14" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><path d="M32 8l20 8v16c0 12-8 20-20 24C20 52 12 44 12 32V16l20-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M24 32l6 6 12-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Facilities</h3>
+            <span class="domain-card__sub">Estates &amp; Infrastructure</span>
+          </div>
+        </button>
+
+        <button class="domain-card" data-domain="security" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 8l20 8v16c0 12-8 20-20 24C20 52 12 44 12 32V16l20-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M24 32l6 6 12-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Security</h3>
+            <span class="domain-card__sub">Private &amp; Industrial</span>
+          </div>
+        </button>
+
+        <button class="domain-card" data-domain="insurance-legal" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M20 8h18l12 12v32a4 4 0 01-4 4H20a4 4 0 01-4-4V12a4 4 0 014-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M38 8v12h12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M32 28l6 3v6c0 4-2.5 7-6 9-3.5-2-6-5-6-9v-6l6-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Insurance &amp; Legal</h3>
+            <span class="domain-card__sub">Policies &amp; Compliance</span>
+          </div>
+        </button>
+
       </div>
 
     </div>
   </section>
 
   <!-- Business Holdings — Executive Visibility -->
-  <section class="section section--alt" aria-label="Business holdings executive visibility">
+  <section class="section section--alt section--bg-image" aria-label="Business holdings executive visibility" style="background-image: url('assets/total_view.webp');">
+    <div class="section--bg-image__overlay"></div>
     <div class="container">
       <div class="services-mode-header reveal">
         <div class="services-mode-badge services-mode-badge--secondary">Executive Visibility</div>
@@ -186,76 +162,49 @@
         <p class="services-mode-desc">Existing teams stay in place. Nothing changes on their end. Fusion Cell reads their output and consolidates it into your view. You get executive-level visibility without disrupting existing operations.</p>
       </div>
 
-      <!-- Portfolio Companies -->
-      <div class="domain reveal">
-        <div class="domain__content">
-          <div class="domain__label">Portfolio Companies — P&amp;L Reporting &amp; Financials</div>
-          <h3 class="domain__title">One View Across All Your Companies</h3>
-          <p class="domain__desc">Profit and loss reporting, financial summaries, and operational metrics from your portfolio companies — consolidated into one view. Existing finance and operations teams continue as-is. Fusion Cell reads their output and presents it at the level of detail you choose.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">P&amp;L consolidation across entities</span>
-            <span class="domain__capability">Financial summaries and KPI tracking</span>
-            <span class="domain__capability">Operational metrics and performance data</span>
-            <span class="domain__capability">Read-only — existing teams unaffected</span>
-          </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><rect x="8" y="36" width="10" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="22" y="28" width="10" height="24" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="36" y="18" width="10" height="34" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="50" y="10" width="10" height="42" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-      </div>
+      <!-- Domain card grid -->
+      <div class="domain-grid domain-grid--business">
 
-      <!-- Investment Entities -->
-      <div class="domain domain--reverse reveal">
-        <div class="domain__content">
-          <div class="domain__label">Investment Entities — Performance Data</div>
-          <h3 class="domain__title">Performance Without the Patchwork</h3>
-          <p class="domain__desc">Investment performance tracking, allocation summaries, and returns data from existing investment managers and advisors. Your advisors keep operating as-is. Fusion Cell consolidates their reporting into your unified view — so you see everything in one place instead of assembling it from half a dozen separate reports.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Performance tracking across entities</span>
-            <span class="domain__capability">Allocation summaries and returns data</span>
-            <span class="domain__capability">Consolidated view of all investment reporting</span>
-            <span class="domain__capability">Read-only — existing advisors unaffected</span>
+        <button class="domain-card" data-domain="portfolio" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect x="8" y="36" width="10" height="16" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="22" y="28" width="10" height="24" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="36" y="18" width="10" height="34" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="50" y="10" width="10" height="42" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1.5"/><path d="M32 12v20l12 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-      </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Portfolio Companies</h3>
+            <span class="domain-card__sub">P&amp;L Reporting &amp; Financials</span>
+          </div>
+        </button>
 
-      <!-- Real Estate Holdings -->
-      <div class="domain reveal">
-        <div class="domain__content">
-          <div class="domain__label">Real Estate Holdings — Metrics &amp; Valuation</div>
-          <h3 class="domain__title">Valuations and Performance Consolidated</h3>
-          <p class="domain__desc">Property valuations, market data, and performance metrics across your real estate holdings. Existing property managers continue as-is — Fusion Cell reads their output and presents it alongside everything else in your unified view. No disruption. Just clarity.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Property valuations and market data</span>
-            <span class="domain__capability">Performance metrics across holdings</span>
-            <span class="domain__capability">Operating expense visibility</span>
-            <span class="domain__capability">Read-only — existing managers unaffected</span>
+        <button class="domain-card" data-domain="investments" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1.5"/><path d="M32 12v20l12 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><rect x="12" y="24" width="40" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 28l24-16 24 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 52V38h8v14M36 52V38h8v14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        </div>
-      </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Investment Entities</h3>
+            <span class="domain-card__sub">Performance Data</span>
+          </div>
+        </button>
 
-      <!-- Market Intelligence -->
-      <div class="domain domain--reverse reveal">
-        <div class="domain__content">
-          <div class="domain__label">Market Intelligence — External Factors &amp; Signals</div>
-          <h3 class="domain__title">Context for Better Decisions</h3>
-          <p class="domain__desc">Economic indicators, market signals, and external factors relevant to your holdings. Your team monitors the context around your holdings and surfaces what matters — so the information you receive isn't just what you own, but what's happening around it.</p>
-          <div class="domain__capabilities">
-            <span class="domain__capability">Economic indicators and macro signals</span>
-            <span class="domain__capability">Market data relevant to your holdings</span>
-            <span class="domain__capability">External factors and emerging risks</span>
-            <span class="domain__capability">Contextual data for informed decisions</span>
+        <button class="domain-card" data-domain="real-estate" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect x="12" y="24" width="40" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 28l24-16 24 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 52V38h8v14M36 52V38h8v14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
           </div>
-        </div>
-        <div class="domain__visual" aria-hidden="true">
-          <svg class="domain__visual-icon" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M32 8v6M32 50v6M8 32h6M50 32h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M15.5 15.5l4.2 4.2M44.3 44.3l4.2 4.2M15.5 48.5l4.2-4.2M44.3 19.7l4.2-4.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Real Estate Holdings</h3>
+            <span class="domain-card__sub">Metrics &amp; Valuation</span>
+          </div>
+        </button>
+
+        <button class="domain-card" data-domain="market-intel" type="button">
+          <div class="domain-card__icon-wrap">
+            <svg class="domain-card__icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M32 8v6M32 50v6M8 32h6M50 32h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M15.5 15.5l4.2 4.2M44.3 44.3l4.2 4.2M15.5 48.5l4.2-4.2M44.3 19.7l4.2-4.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="domain-card__text">
+            <h3 class="domain-card__title">Market Intelligence</h3>
+            <span class="domain-card__sub">External Signals</span>
+          </div>
+        </button>
+
       </div>
 
     </div>
@@ -268,6 +217,7 @@
         <div class="accent-line accent-line--center"></div>
         <h2 class="section-heading" style="margin-bottom: 24px;">No Two Fusion Cells Are the Same</h2>
         <p>No two Fusion Cells are the same because no two principals have the same requirements. If your holdings include categories beyond what's listed here, your team is configured to match.</p>
+        <a href="contact.html" class="btn btn--filled">Start a Conversation</a>
       </div>
     </div>
   </section>
@@ -289,6 +239,175 @@
     </div>
   </footer>
 
+  <!-- Domain Modal -->
+  <div class="domain-modal" id="domainModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="domain-modal__backdrop"></div>
+    <div class="domain-modal__panel">
+      <button class="domain-modal__close" aria-label="Close" type="button">&times;</button>
+      <div class="domain-modal__body">
+        <div class="domain-modal__label"></div>
+        <h2 class="domain-modal__title"></h2>
+        <p class="domain-modal__desc"></p>
+        <ul class="domain-modal__caps"></ul>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var domainData = {
+        'family-office': {
+          label: 'Family Office — Expenditure & Admin',
+          title: 'Consolidated Household Operations',
+          desc: 'Household operations, staff coordination, expenditure tracking, and administrative oversight. Your team consolidates family office operations into one managed workflow — replacing the patchwork of separate relationships and reporting formats.',
+          caps: [
+            'Expenditure tracking and budget management',
+            'Staff coordination and vendor management',
+            'Administrative oversight and compliance',
+            'Consolidated reporting into your view'
+          ]
+        },
+        'aviation': {
+          label: 'Aviation — Part 91 & Part 135',
+          title: 'Full Cost-of-Ownership Visibility',
+          desc: 'Aircraft ownership, operating budgets, maintenance schedules, crew management, fuel costs, hangar agreements. Your team manages every element and presents you with a clear picture of what your aircraft costs to own and operate — without you assembling it yourself.',
+          caps: [
+            'Operating budget and cost-per-hour tracking',
+            'Maintenance schedule and compliance oversight',
+            'Crew coordination and management',
+            'Hangar, fuel, and insurance management'
+          ]
+        },
+        'maritime': {
+          label: 'Maritime — Yachting & Commercial',
+          title: 'Vessels Managed Season to Season',
+          desc: 'Vessels, dock fees, crew management, maintenance cycles, insurance, and seasonal operations. Your maritime specialist keeps everything running — so you\'re never chasing updates across half a dozen separate contractors.',
+          caps: [
+            'Dock fees and marina coordination',
+            'Crew management and scheduling',
+            'Maintenance cycles and refit planning',
+            'Insurance and registration compliance'
+          ]
+        },
+        'facilities': {
+          label: 'Facilities — Estates & Infrastructure',
+          title: 'Every Property, Fully Managed',
+          desc: 'Residential properties, vacation homes, commercial facilities, and estate infrastructure. Maintenance, vendor coordination, insurance, and budget management — all handled by your team. Current valuations, scheduled upkeep, and nothing missed.',
+          caps: [
+            'Maintenance scheduling and vendor coordination',
+            'Operating budget management',
+            'Insurance and tax obligation tracking',
+            'Property valuations and market tracking'
+          ]
+        },
+        'security': {
+          label: 'Security — Private & Industrial',
+          title: 'Coordinated Across All Holdings and Locations',
+          desc: 'Physical security coordination, risk assessment, and protective services management across all holdings and locations. Your team maintains oversight of security protocols — so risks are identified proactively and responses are coordinated, not reactive.',
+          caps: [
+            'Physical security coordination',
+            'Risk assessment and monitoring',
+            'Protective services management',
+            'Cross-holdings security protocol oversight'
+          ]
+        },
+        'portfolio': {
+          label: 'Portfolio Companies — P&L Reporting & Financials',
+          title: 'One View Across All Your Companies',
+          desc: 'Profit and loss reporting, financial summaries, and operational metrics from your portfolio companies — consolidated into one view. Existing finance and operations teams continue as-is. Fusion Cell reads their output and presents it at the level of detail you choose.',
+          caps: [
+            'P&L consolidation across entities',
+            'Financial summaries and KPI tracking',
+            'Operational metrics and performance data',
+            'Read-only — existing teams unaffected'
+          ]
+        },
+        'investments': {
+          label: 'Investment Entities — Performance Data',
+          title: 'Performance Without the Patchwork',
+          desc: 'Investment performance tracking, allocation summaries, and returns data from existing investment managers and advisors. Your advisors keep operating as-is. Fusion Cell consolidates their reporting into your unified view — so you see everything in one place instead of assembling it from half a dozen separate reports.',
+          caps: [
+            'Performance tracking across entities',
+            'Allocation summaries and returns data',
+            'Consolidated view of all investment reporting',
+            'Read-only — existing advisors unaffected'
+          ]
+        },
+        'real-estate': {
+          label: 'Real Estate Holdings — Metrics & Valuation',
+          title: 'Valuations and Performance Consolidated',
+          desc: 'Property valuations, market data, and performance metrics across your real estate holdings. Existing property managers continue as-is — Fusion Cell reads their output and presents it alongside everything else in your unified view. No disruption. Just clarity.',
+          caps: [
+            'Property valuations and market data',
+            'Performance metrics across holdings',
+            'Operating expense visibility',
+            'Read-only — existing managers unaffected'
+          ]
+        },
+        'market-intel': {
+          label: 'Market Intelligence — External Factors & Signals',
+          title: 'Context for Better Decisions',
+          desc: 'Economic indicators, market signals, and external factors relevant to your holdings. Your team monitors the context around your holdings and surfaces what matters — so the information you receive isn\'t just what you own, but what\'s happening around it.',
+          caps: [
+            'Economic indicators and macro signals',
+            'Market data relevant to your holdings',
+            'External factors and emerging risks',
+            'Contextual data for informed decisions'
+          ]
+        },
+        'insurance-legal': {
+          label: 'Insurance & Legal — Policies & Compliance',
+          title: 'Coordinated Coverage Across All Holdings',
+          desc: 'Insurance policies, legal obligations, and compliance requirements across your entire portfolio of holdings. Your team maintains oversight of all coverage, renewals, and legal coordination — so nothing lapses, nothing conflicts, and every holding is protected.',
+          caps: [
+            'Policy management and renewal tracking',
+            'Legal coordination and compliance',
+            'Cross-holdings coverage oversight',
+            'Risk mitigation and gap analysis'
+          ]
+        }
+      };
+
+      var modal = document.getElementById('domainModal');
+      var backdrop = modal.querySelector('.domain-modal__backdrop');
+      var closeBtn = modal.querySelector('.domain-modal__close');
+      var mLabel = modal.querySelector('.domain-modal__label');
+      var mTitle = modal.querySelector('.domain-modal__title');
+      var mDesc = modal.querySelector('.domain-modal__desc');
+      var mCaps = modal.querySelector('.domain-modal__caps');
+
+      function openModal(key) {
+        var d = domainData[key];
+        if (!d) return;
+        mLabel.textContent = d.label;
+        mTitle.textContent = d.title;
+        mDesc.textContent = d.desc;
+        mCaps.innerHTML = d.caps.map(function (c) { return '<li>' + c + '</li>'; }).join('');
+        modal.classList.add('domain-modal--open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove('domain-modal--open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.domain-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          openModal(this.getAttribute('data-domain'));
+        });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('domain-modal--open')) closeModal();
+      });
+    })();
+  </script>
 </body>
 </html>
