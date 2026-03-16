@@ -345,6 +345,11 @@
   color: var(--color-text);
 }
 
+.data-flow-v2__title--foundation {
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  line-height: 1.2;
+}
+
 .data-flow-v2__desc {
   font-size: 0.8125rem;
   color: var(--color-text-secondary);
@@ -357,10 +362,11 @@
   margin-top: 16px;
   padding-top: 14px;
   border-top: 1px solid var(--color-border);
-  font-size: 0.625rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
   color: var(--color-accent);
 }
 
