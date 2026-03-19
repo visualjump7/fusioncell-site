@@ -188,41 +188,123 @@
       margin-bottom: 16px;
     }
 
-    .tem-card {
-      background: var(--color-surface-elevated);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 36px 32px;
+    .tem-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 64px;
     }
 
-    .tem-card__word {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 4vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--color-accent);
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    .tem-card__rule {
-      border: none;
+    .tem-pillar {
+      display: grid;
+      grid-template-columns: 100px 1fr 4px;
+      align-items: start;
+      gap: 0 40px;
+      padding: 48px 0;
       border-top: 1px solid var(--color-border);
-      margin: 0 0 20px 0;
+      position: relative;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .tem-card__stat {
-      font-size: 1rem;
+    .tem-pillar:last-child {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tem-pillar.tem-pillar--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tem-pillar[data-index="1"] { transition-delay: 0.15s; }
+    .tem-pillar[data-index="2"] { transition-delay: 0.3s; }
+
+    .tem-pillar__number {
+      font-size: clamp(2rem, 3.5vw, 3rem);
       font-weight: 700;
-      color: var(--color-text);
-      margin-bottom: 10px;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      color: var(--color-border);
+      padding-top: 8px;
+      line-height: 1;
+    }
     }
 
-    .tem-card__desc {
+    .tem-pillar__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tem-pillar__word {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--color-text);
+      line-height: 1;
+      margin-bottom: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .tem-pillar:hover .tem-pillar__word {
+      color: var(--color-accent);
+    }
+
+    .tem-pillar__stat {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 700;
+      color: var(--color-accent);
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
+
+    .tem-pillar__desc {
       font-size: 0.9375rem;
       color: var(--color-text-secondary);
       line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .tem-pillar__bar {
+      width: 4px;
+      height: 0;
+      background: var(--color-accent);
+      border-radius: 2px;
+      align-self: stretch;
+      transition: height 0.8s ease 0.3s;
+    }
+
+    .tem-pillar.tem-pillar--visible .tem-pillar__bar {
+      height: 100%;
+    }
+
+    @media (max-width: 640px) {
+      .tem-pillars {
+        margin-top: 40px;
+      }
+      .tem-pillar {
+        grid-template-columns: 60px 1fr 3px;
+        gap: 0 20px;
+        padding: 36px 0;
+      }
+      .tem-pillar__bar {
+        display: none;
+      }
+    }
+
+    /* Old tem-card styles kept for safety but unused */
+    .tem-card { display: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tem-pillar {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .tem-pillar__bar {
+        height: 100%;
+        transition: none;
+      }
     }
 
     @media (max-width: 768px) {
@@ -304,9 +386,9 @@
     <div class="hero__inner">
       <div class="hero__content">
         <h1 class="hero-headline hero__headline">One Team. One Fee. <span class="hero__accent">Millions Saved.</span></h1>
-        <p class="hero__sub">You're paying a fragmentation tax right now in <strong>time, energy, and money</strong> — multiple managers, multiple fees, multiple reporting formats, zero coordination. Fusion Cell replaces all of it with one team, one consolidated view, and one fee.</p>
+        <p class="hero__sub">You're paying a fragmentation tax right now in <strong>your time, your energy, and your money</strong> — multiple managers, multiple fees, multiple reporting formats, zero coordination. Fusion Cell replaces all of it with one team, one consolidated view, and one fee.</p>
         <a href="contact.html" class="btn btn--outline">See How Much You Could Save</a>
-        <p class="hero__credibility">Managing over $14.4 billion in holdings worldwide.</p>
+        <p class="hero__credibility">Successfully managed over <span class="hero__credibility-num">$14.4 billion</span> in holdings worldwide.</p>
       </div>
       <div class="hero__video-wrapper">
         <video class="hero__video" controls playsinline preload="none" poster="assets/thumbnail.webp">
@@ -317,30 +399,39 @@
   </section>
 
   <!-- Time / Energy / Money Pillars -->
-  <section class="section section--alt" aria-label="What you lose without Fusion Cell">
+  <section class="section section--alt tem-section" aria-label="What you lose without Fusion Cell">
     <div class="container">
       <div class="section-header reveal">
         <p class="tem-eyebrow">What fragmented management costs you</p>
         <h2 class="section-heading">You're Losing <span class="text-accent">Three Things</span> Every Day</h2>
       </div>
-      <div class="grid-3 reveal-stagger">
-        <div class="tem-card reveal">
-          <div class="tem-card__word">Time</div>
-          <hr class="tem-card__rule">
-          <p class="tem-card__stat">10–20 hours every week</p>
-          <p class="tem-card__desc">Spent chasing updates, reconciling invoices, and coordinating between teams that don't talk to each other. That's 500–1,000 hours a year of your life spent managing your managers.</p>
+      <div class="tem-pillars">
+        <div class="tem-pillar" data-index="0">
+          <div class="tem-pillar__number">01</div>
+          <div class="tem-pillar__content">
+            <div class="tem-pillar__word">Time</div>
+            <div class="tem-pillar__stat">10–20 hours every week</div>
+            <p class="tem-pillar__desc">Spent chasing updates, reconciling invoices, and coordinating between teams that don't talk to each other. That's 500–1,000 hours a year of your life spent managing your managers.</p>
+          </div>
+          <div class="tem-pillar__bar"></div>
         </div>
-        <div class="tem-card reveal">
-          <div class="tem-card__word">Energy</div>
-          <hr class="tem-card__rule">
-          <p class="tem-card__stat">Constant mental overhead</p>
-          <p class="tem-card__desc">Mental bandwidth consumed managing managers. Decisions delayed because no one owns the full picture. Blind spots everywhere. No single source of truth — just a stack of reports that don't agree.</p>
+        <div class="tem-pillar" data-index="1">
+          <div class="tem-pillar__number">02</div>
+          <div class="tem-pillar__content">
+            <div class="tem-pillar__word">Energy</div>
+            <div class="tem-pillar__stat">Constant mental overhead</div>
+            <p class="tem-pillar__desc">Mental bandwidth consumed managing managers. Decisions delayed because no one owns the full picture. Blind spots everywhere. No single source of truth — just a stack of reports that don't agree.</p>
+          </div>
+          <div class="tem-pillar__bar"></div>
         </div>
-        <div class="tem-card reveal">
-          <div class="tem-card__word">Money</div>
-          <hr class="tem-card__rule">
-          <p class="tem-card__stat">15–25% fragmentation premium</p>
-          <p class="tem-card__desc">Paid across disconnected vendors doing duplicate work with overlapping fees. Nobody watching the whole picture means nobody catching the waste. Consolidation recovers that — and more.</p>
+        <div class="tem-pillar" data-index="2">
+          <div class="tem-pillar__number">03</div>
+          <div class="tem-pillar__content">
+            <div class="tem-pillar__word">Money</div>
+            <div class="tem-pillar__stat">15–25% fragmentation premium</div>
+            <p class="tem-pillar__desc">Paid across disconnected vendors doing duplicate work with overlapping fees. Nobody watching the whole picture means nobody catching the waste. Consolidation recovers that — and more.</p>
+          </div>
+          <div class="tem-pillar__bar"></div>
         </div>
       </div>
     </div>
@@ -375,37 +466,18 @@
     </div>
   </section>
 
-  <!-- How Fusion Cell Saves You Money -->
-  <section class="section section--alt" aria-label="How Fusion Cell saves you money">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-heading">How Fusion Cell Gives Back Your <span class="section-heading__accent">Time, Energy &amp; Money</span></h2>
-        <p class="text-secondary">It's simple. Instead of paying a dozen teams that don't talk to each other, you pay one team that manages everything — and you get your life back.</p>
-      </div>
-      <div class="grid-3 reveal-stagger">
-        <div class="card card--elevated reveal">
-          <div class="card__icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <h3 class="card__title">Consolidate</h3>
-          <p class="card__desc">Replace 10–15 management relationships with one dedicated team. One point of contact. One invoice. One fee. No more paying separate companies to do disconnected work.</p>
-        </div>
-        <div class="card card--elevated reveal">
-          <div class="card__icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <h3 class="card__title">Standardize</h3>
-          <p class="card__desc">Every invoice, every report, every data point standardized into one verified format. No more reconciling spreadsheets, chasing down updates, or comparing apples to oranges.</p>
-        </div>
-        <div class="card card--elevated reveal">
-          <div class="card__icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </div>
-          <h3 class="card__title">Eliminate Waste</h3>
-          <p class="card__desc">Duplicate services, overlapping vendors, and blind spots disappear when one team sees everything. Your Fusion Cell identifies redundancies that fragmented management can't.</p>
-        </div>
-      </div>
-      <blockquote class="comparison-quote reveal">"Consolidation typically recovers 15–25% in oversight costs."<br>— Source: PwC Family Office Report</blockquote>
+  <!-- 15-25% Fragmentation Premium Pullout -->
+  <section class="pwc-pullout" aria-label="The fragmentation premium">
+    <div class="pwc-pullout__inner reveal">
+      <p class="pwc-pullout__eyebrow">Validated by PwC Family Office Report</p>
+      <h2 class="pwc-pullout__headline">
+        Right now, you're paying
+        <span class="pwc-pullout__number">15–25% more</span>
+        than you need to.
+      </h2>
+      <p class="pwc-pullout__body">That's the fragmentation premium. The measurable cost of running separate vendors with no coordination, no unified picture, and nobody watching the whole. It's not a theory — it's been measured, documented, and verified. Every year you don't consolidate is another year you pay it.</p>
+      <p class="pwc-pullout__source">— Source: PwC Family Office Report</p>
+      <a href="contact.html" class="btn btn--outline">Start a Conversation</a>
     </div>
   </section>
 
@@ -465,21 +537,6 @@
     </div>
   </section>
 
-  <!-- 15-25% Fragmentation Premium Pullout -->
-  <section class="pwc-pullout" aria-label="The fragmentation premium">
-    <div class="pwc-pullout__inner reveal">
-      <p class="pwc-pullout__eyebrow">Validated by PwC Family Office Report</p>
-      <h2 class="pwc-pullout__headline">
-        Right now, you're paying
-        <span class="pwc-pullout__number">15–25% more</span>
-        than you need to.
-      </h2>
-      <p class="pwc-pullout__body">That's the fragmentation premium. The measurable cost of running separate vendors with no coordination, no unified picture, and nobody watching the whole. It's not a theory — it's been measured, documented, and verified. Every year you don't consolidate is another year you pay it.</p>
-      <p class="pwc-pullout__source">— Source: PwC Family Office Report</p>
-      <a href="contact.html" class="btn btn--outline">Start a Conversation</a>
-    </div>
-  </section>
-
   <!-- What You Get -->
   <section class="section section--alt" aria-label="What you get">
     <div class="container">
@@ -512,6 +569,40 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- How Fusion Cell Saves You Money -->
+  <section class="section section--alt" aria-label="How Fusion Cell saves you money">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-heading">How Fusion Cell Gives Back <span class="section-heading__accent">Your Time, Your Energy &amp; Your Money</span></h2>
+        <p class="text-secondary">It's simple. Instead of paying a dozen teams that don't talk to each other, you pay one team that manages everything — and you get your life back.</p>
+      </div>
+      <div class="grid-3 reveal-stagger">
+        <div class="card card--elevated reveal">
+          <div class="card__icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3 class="card__title">Consolidate</h3>
+          <p class="card__desc">Replace 10–15 management relationships with one dedicated team. One point of contact. One invoice. One fee. No more paying separate companies to do disconnected work.</p>
+        </div>
+        <div class="card card--elevated reveal">
+          <div class="card__icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="card__title">Standardize</h3>
+          <p class="card__desc">Every invoice, every report, every data point standardized into one verified format. No more reconciling spreadsheets, chasing down updates, or comparing apples to oranges.</p>
+        </div>
+        <div class="card card--elevated reveal">
+          <div class="card__icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3 class="card__title">Eliminate Waste</h3>
+          <p class="card__desc">Duplicate services, overlapping vendors, and blind spots disappear when one team sees everything. Your Fusion Cell identifies redundancies that fragmented management can't.</p>
+        </div>
+      </div>
+      <blockquote class="comparison-quote reveal">"Consolidation typically recovers 15–25% in oversight costs."<br>— Source: PwC Family Office Report</blockquote>
     </div>
   </section>
 
@@ -557,7 +648,7 @@
     <div class="container">
       <div class="cta-closing reveal">
         <h2 class="section-heading">Stop Paying the <span class="text-accent">Fragmentation Tax</span></h2>
-        <p>Find out how much time, energy, and money you could recover.</p>
+        <p>Find out how much of your time, your energy, and your money you could recover.</p>
         <a href="contact.html" class="btn btn--filled">Get in Touch</a>
       </div>
     </div>
@@ -582,5 +673,20 @@
 
   <script src="js/main.js"></script>
   <script src="js/home.js"></script>
+  <script>
+    (function() {
+      var pillars = document.querySelectorAll('.tem-pillar');
+      if (!pillars.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('tem-pillar--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      pillars.forEach(function(p) { observer.observe(p); });
+    })();
+  </script>
 </body>
 </html>
